@@ -90,8 +90,29 @@
 
       <tr>
         <td>
-          <h2> <font color="gray">2021 </font> </h2>
+          <h2> <font color="gray">2022 </font> </h2>
         </td>
+      </tr>
+
+      <tr>
+        <td width="30%" valign="top" align="center" href="https://arxiv.org/pdf/2208.11284.pdf">
+          <a href="https://arxiv.org/pdf/2208.11284.pdf">
+            <img src="images/teaser_fig/multi.png" alt="sym" width="450" height ="450" style="border-style: none" />
+          </a>
+        </td>
+        <td width="70%" valign="top">
+          <a href="https://arxiv.org/pdf/2208.11284.pdf" id="2023FG_paper"><paper_title>Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models</paper_title></a>
+          <br><strong>Nithin Goplakrishnan Nair</strong> Wele Gedara Chaminda Bandara and Vishal M Patel.<br>  <em> Arxiv</em>, 2022<br><div class="paper" id="2023multi_paper">
+            <a href="docs/UniteConquer.pdf">CV</a>
+            | <a href="javascript:toggleblock('2023multi_abs')">abstract</a>
+            | <a href="projectpages/Multidiff/index.html">Project page</a>
+
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2023FG')">bibtex</a> -->
+            <p align="justify"><i id="2023multi_abs">
+                Generating photos satisfying multiple constraints finds broad utility in the content creation industry. A key hurdle to accomplishing this task is the need for paired data consisting of all modalities (i.e., constraints) and their corresponding output. Moreover, existing methods need retraining using paired data across all modalities to introduce a new condition. This paper proposes a solution to this problem based on denoising diffusion probabilistic models (DDPMs). Our motivation for choosing diffusion models over other generative models comes from the flexible internal structure of diffusion models. Since each sampling step in the DDPM follows a Gaussian distribution, we show that there exists a closed-form solution for generating an image given various constraints. Our method can \underline{unite} multiple diffusion models trained on multiple sub-tasks and \underline{conquer}  the combined task through our proposed sampling strategy. We also introduce a novel reliability parameter that allows using different off-the-shelf diffusion models trained across various datasets  during sampling time alone to guide it to the desired outcome satisfying multiple constraints.  We perform experiments on various standard multimodal tasks to demonstrate the effectiveness of our approach.
+
+            </i></p><pre xml:space="preserve">
+          </pre></div></td>
       </tr>
 
       <tr>
@@ -105,7 +126,7 @@
           <br><strong>Nithin Goplakrishnan Nair</strong> and Vishal M Patel.<br> accepted at <em> IEEE FG</em>, 2023<br><div class="paper" id="2023FG_paper">
             <a href="https://arxiv.org/pdf/2208.11284.pdf">pdf</a>
             | <a href="javascript:toggleblock('2023FG_abs')">abstract</a>
-            | <a shape="rect" class="togglebib" href="javascript:togglebib('2023FG')">bibtex</a>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2023FG')">bibtex</a> -->
             <p align="justify"><i id="2023FG_abs">
                 Modern-day surveillance systems perform person recognition using deep learning-based face verification networks. Most state-of-the-art facial verification systems are trained using visible spectrum images. But, acquiring images in the visible spectrum is impractical in scenarios of low-light and nighttime conditions, and often images are captured in an alternate domain such as the thermal infrared domain. Facial verification in thermal images is often performed after retrieving the corresponding visible domain images. This is a well-established problem often known as the Thermal-to-Visible (T2V) image translation. In this paper, we propose a Denoising Diffusion Probabilistic Model (DDPM) based solution for T2V translation specifically for facial images. During training, the model learns the conditional distribution of visible facial images given their corresponding thermal image through the diffusion process. During inference, the visible domain image is obtained by starting from Gaussian noise and performing denoising repeatedly. The existing inference process for DDPMs is stochastic and time-consuming. Hence, we propose a novel inference strategy for speeding up the inference time of DDPMs, specifically for the problem of T2V image translation. We achieve the state-of-the-art results on multiple datasets. The code and pretrained models are publically available at http://github.com/Nithin-GK/T2V-DDPM.
 
@@ -124,7 +145,7 @@
           <br><strong>Nithin Gopalakrishnan Nair</strong>, Kangfu Mei and Vishal M.Patel . <br> accepted at <em>IEEE WACV</em>, 2023<br><div class="paper" id="2023wacv_paper">
             <a href="https://arxiv.org/pdf/2208.11284.pdf">pdf</a>
             | <a href="javascript:toggleblock('2023wacv_abs')">abstract</a>
-            | <a shape="rect" class="togglebib" href="javascript:togglebib('2023wacv')">bibtex</a><br>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2023wacv')">bibtex</a><br> -->
             <p align="justify"><i id="2023wacv_abs">
                 Although many long-range imaging systems are designed to support extended vision applications, a natural obstacle to their operation is degradation due to atmospheric turbulence. Atmospheric turbulence causes significant degradation to image quality by introducing blur and geometric distortion. In recent years, various deep learning-based single image atmospheric turbulence mitigation methods, including CNN-based and GAN inversion-based, have been proposed in the literature which attempt to remove the distortion in the image. However, some of these methods are difficult to train and often fail to reconstruct facial features and produce unrealistic results especially in the case of high turbulence. Denoising Diffusion Probabilistic Models (DDPMs) have recently gained some traction because of their stable training process and their ability to generate high quality images. In this paper, we propose the first DDPM-based solution for the problem of atmospheric turbulence mitigation. We also propose a fast sampling technique for reducing the inference times for conditional DDPMs. Extensive experiments are conducted on synthetic and real-world data to show the significance of our model. To facilitate further research, all codes and pretrained models will be made public after the review process.
 
@@ -151,7 +172,7 @@
           <br><strong>Nithin Gopalakrishnan Nair</strong>, Rajeev Yasarla, Vishal M. Patel. <br> accepted at <em>ICIP</em>, 2022<br><div class="paper" id="2022icip_nbd_paper">
             <a href="https://arxiv.org/abs/2010.05862">pdf</a>
             | <a href="javascript:toggleblock('2022icip_nbd_abs')">abstract</a>
-            | <a shape="rect" class="togglebib" href="javascript:togglebib('2022icip_nbd')">bibtex</a>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2022icip_nbd')">bibtex</a> -->
             <p align="justify"><i id="2022icip_nbd_abs">
                 In recent years, deep neural network-based restoration methods have achieved state-of-the-art results in various image deblurring tasks. However, one major drawback of deep learning-based deblurring networks is that large amounts of blurry-clean image pairs  are required for training to achieve good performance. Moreover, deep networks often fail to perform well when the blurry images and the blur kernels during  testing  are very different from the ones used during training. This happens mainly because of the overfitting of the network parameters on the training data. In this work, we present a method that addresses these issues.
                 We view the non-blind image deblurring problem as a denoising problem. To do so, we perform Wiener filtering  on a pair of blurry images with the corresponding blur kernels. This results in a pair of images with colored noise.  Hence, the deblurring problem is translated into a denoising problem. We then solve the denoising problem without using explicit clean target images. Extensive  experiments are conducted to show that our method achieves results that are on par to the state-of-the-art non-blind deblurring works. 
@@ -171,7 +192,7 @@
           <br><strong>Nithin Gopalakrishnan Nair</strong>, Kangfu Mei,and Vishal M. Patel.<br><em>accepted at ICIP</em>, 2022<br><div class="paper" id="2020icipturb">
             <a href="https://arxiv.org/pdf/2204.08974.pdf">pdf</a>
             | <a href="javascript:toggleblock('2022icipturb_abs')">abstract</a>
-            | <a shape="rect" class="togglebib" href="javascript:togglebib('2022icipturb')">bibtex</a>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2022icipturb')">bibtex</a> -->
             <p align="justify"><i id="2022icipturb_abs">
                 Atmospheric turbulence deteriorates the quality of images captured by long-range imaging systems by introducing  blur and geometric distortions to the captured scene. This leads to a drastic drop in performance when computer vision algorithms like object/face recognition and detection are performed on these images.  In recent years, various deep learning-based atmospheric turbulence mitigation methods have been proposed in the literature.  These methods are often trained using synthetically generated images and tested on real-world images. Hence, the performance of these restoration methods depends on the type of simulation used for training the network.   In this paper, we systematically  evaluate the effectiveness of various turbulence simulation methods on image restoration.  In particular, we evaluate the performance of two state-or-the-art  restoration networks using six simulations method on a real-world LRFID dataset consisting of face images degraded by turbulence.  This paper will provide guidance to the researchers and practitioners working in this field to 
                 choose the suitable data generation models for training deep 
@@ -204,7 +225,7 @@
           <br> <strong>Nithin Gopalakrishnan Nair</strong>, Vishal M.Patel .<br><em>ICIP</em>, 2021<br><div class="paper" id="2021icip">
             <a href="https://ieeexplore.ieee.org/document/9506125">pdf</a>
             | <a href="javascript:toggleblock('2021icip_abs')">abstract</a>
-            | <a shape="rect" class="togglebib" href="javascript:togglebib('2021icip')">bibtex</a>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2021icip')">bibtex</a> -->
             <p align="justify"><i id="2021icip_abs">
                 Atmospheric turbulence can adversely affect the quality of images or videos captured by long range imaging systems. Turbulence causes both geometric and blur distortions in images which in turn results in poor performance of the subsequent computer vision algorithms like recognition and detection. Existing methods for atmospheric turbulence mitigation use registration and deconvolution schemes to remove degradations. In this paper, we present a deep learning-based solution in which Effective Nearest Neighbors (ENN) based method is used for registration and an uncertainty-based network is used for restoration. We perform qualitative and quantitative comparisons using synthetic and real-world datasets to show the significance of our work.
             </i></p><pre xml:space="preserve">
@@ -232,7 +253,7 @@
           <br> Mahesh Mohan MR <strong>Nithin Gopalakrishnan Nair</strong>, AN Rajagopalan .<br><em>TIP</em>, 2021<br><div class="paper" id="2021icip">
             <a href="https://maheshmohanmr.github.io/files/tip_ons.pdf">pdf</a>
             | <a href="javascript:toggleblock('2021tip_abs')">abstract</a>
-            | <a shape="rect" class="togglebib" href="javascript:togglebib('2021tip')">bibtex</a>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2021tip')">bibtex</a> -->
             <p align="justify"><i id="2021tip_abs">
                 Deep Dynamic Scene Deblurring for Unconstrained
                 Dual-Lens Cameras
