@@ -73,7 +73,7 @@
               <li>One paper accepted at IEEE FG 2023.</li>
               <li>One paper accepted at IEEE WACV 2023.</li>
               <li>Two papers accepted at ICIP 2022.</li>
-              <li>Incoming research intern at Mistubishi Electric Research Labs, Summer 2022.</li>
+              <li>Research intern at Mistubishi Electric Research Labs, Summer 2022.</li>
           </ul>
         </td>
       </tr>
@@ -97,19 +97,18 @@
       <tr>
         <td width="30%" valign="top" align="center" href="https://arxiv.org/pdf/2208.11284.pdf">
           <a href="https://arxiv.org/pdf/2208.11284.pdf">
-            <img src="images/teaser_fig/multi.png" alt="sym" width="450" height ="450" style="border-style: none" />
+            <img src="images/teaser_fig/multi.png" alt="sym" width="450" height ="300" style="border-style: none" />
           </a>
         </td>
         <td width="70%" valign="top">
-          <a href="https://arxiv.org/pdf/2208.11284.pdf" id="2023FG_paper"><paper_title>Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models</paper_title></a>
+          <a href="https://arxiv.org/pdf/2208.11284.pdf" id="2023multi_paper"><paper_title>Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models</paper_title></a>
           <br><strong>Nithin Goplakrishnan Nair</strong> Wele Gedara Chaminda Bandara and Vishal M Patel.<br>  <em> Arxiv</em>, 2022<br><div class="paper" id="2023multi_paper">
-            <a href="docs/UniteConquer.pdf">CV</a>
+            <a href="docs/UniteConquer.pdf">pdf</a>
             | <a href="javascript:toggleblock('2023multi_abs')">abstract</a>
             | <a href="projectpages/Multidiff/index.html">Project page</a>
-
             <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2023FG')">bibtex</a> -->
             <p align="justify"><i id="2023multi_abs">
-                Generating photos satisfying multiple constraints finds broad utility in the content creation industry. A key hurdle to accomplishing this task is the need for paired data consisting of all modalities (i.e., constraints) and their corresponding output. Moreover, existing methods need retraining using paired data across all modalities to introduce a new condition. This paper proposes a solution to this problem based on denoising diffusion probabilistic models (DDPMs). Our motivation for choosing diffusion models over other generative models comes from the flexible internal structure of diffusion models. Since each sampling step in the DDPM follows a Gaussian distribution, we show that there exists a closed-form solution for generating an image given various constraints. Our method can \underline{unite} multiple diffusion models trained on multiple sub-tasks and \underline{conquer}  the combined task through our proposed sampling strategy. We also introduce a novel reliability parameter that allows using different off-the-shelf diffusion models trained across various datasets  during sampling time alone to guide it to the desired outcome satisfying multiple constraints.  We perform experiments on various standard multimodal tasks to demonstrate the effectiveness of our approach.
+                Generating photos satisfying multiple constraints finds broad utility in the content creation industry. A key hurdle to accomplishing this task is the need for paired data consisting of all modalities (i.e., constraints) and their corresponding output. Moreover, existing methods need retraining using paired data across all modalities to introduce a new condition. This paper proposes a solution to this problem based on denoising diffusion probabilistic models (DDPMs). Our motivation for choosing diffusion models over other generative models comes from the flexible internal structure of diffusion models. Since each sampling step in the DDPM follows a Gaussian distribution, we show that there exists a closed-form solution for generating an image given various constraints. Our method can unite multiple diffusion models trained on multiple sub-tasks and conquer the combined task through our proposed sampling strategy. We also introduce a novel reliability parameter that allows using different off-the-shelf diffusion models trained across various datasets  during sampling time alone to guide it to the desired outcome satisfying multiple constraints.  We perform experiments on various standard multimodal tasks to demonstrate the effectiveness of our approach.
 
             </i></p><pre xml:space="preserve">
           </pre></div></td>
@@ -287,6 +286,7 @@
  
   </body>
   <script xml:space="preserve" language="JavaScript">hideallbibs();</script>
+  <script xml:space="preserve" language="javascript">hideblock('2023multi_abs');</script>
   <script xml:space="preserve" language="javascript">hideblock('2023FG_abs');</script>
   <script xml:space="preserve" language="javascript">hideblock('2023wacv_abs');</script>
   <script xml:space="preserve" language="javascript">hideblock('2022icip_nbd_abs');</script>
