@@ -53,26 +53,22 @@
       </video>
     </div>
     <div class="highlight-clean" style="padding-bottom: 10px;">
-        <div class="container" style="max-width: 768px;">
-            <h1 class="text-center"><b>DreamFusion</b>: Text-to-3D using 2D Diffusion</h1>
+        <div class="container" style="max-width: 768px;">: 
+            <h1 class="text-center"><b>Unite and Conquer</b>: Cross Dataset Multimodal Synthesis using Diffusion Models</h1>
         </div>
         <div class="container" style="max-width: 768px;">
             <div class="row authors">
                 <div class="col-sm-3">
-                    <h5 class="text-center"><a class="text-center" href="https://cs.stanford.edu/~poole/">Ben Poole</a></h5>
-                    <h6 class="text-center">Google Research</h6>
+                    <h5 class="text-center"><a class="text-center" href="https://nithin-gk.github.io/">Nithin Gopalakrishnan Nair</a></h5>
+                    <!-- <h6 class="text-center">Google Research</h6> -->
                 </div>
                 <div class="col-sm-3">
-                    <h5 class="text-center"><a href="https://ajayj.com">Ajay Jain</a></h5>
-                    <h6 class="text-center">UC Berkeley</h6>
+                    <h5 class="text-center"><a class="text-center" href="https://scholar.google.com/citations?user=WwLxOJYAAAAJ&hl=en/">Chaminda Bandara</a></h5>
+                    <h6 class="text-center">Johns Hopkins University</h6>
                 </div>
                 <div class="col-sm-3">
-                    <h5 class="text-center"><a class="text-center" href="https://jonbarron.info/">Jonathan T. Barron</a></h5>
-                    <h6 class="text-center">Google Research</h6>
-                </div>
-                <div class="col-sm-3">
-                    <h5 class="text-center"><a class="text-center" href="https://bmild.github.io/">Ben Mildenhall</a></h5>
-                    <h6 class="text-center">Google Research</h6>
+                    <h5 class="text-center"><a class="text-center" href="https://engineering.jhu.edu/vpatel36/team/vishalpatel/">Vishal M Patel</a></h5>
+                    <!-- <h6 class="text-center">Google Research</h6> -->
                 </div>
             </div>    
         </div>
@@ -103,7 +99,7 @@
                 <h2>Abstract</h2>
                 <p>
                     <!-- <strong> -->
-                        Recent breakthroughs in text-to-image synthesis have been driven by diffusion models trained on billions of image-text pairs. Adapting this approach to 3D synthesis would require large-scale datasets of labeled 3D assets and efficient architectures for denoising 3D data, neither of which currently exist. In this work, we circumvent these limitations by using a pretrained 2D text-to-image diffusion model to perform text-to-3D synthesis. We introduce a loss based on probability density distillation that enables the use of a 2D diffusion model as a prior for optimization of a parametric image generator. Using this loss in a DeepDream-like procedure, we optimize a randomly-initialized 3D model (a Neural Radiance Field, or NeRF) via gradient descent such that its 2D renderings from random angles achieve a low loss. The resulting 3D model of the given text can be viewed from any angle, relit by arbitrary illumination, or composited into any 3D environment. Our approach requires no 3D training data and no modifications to the image diffusion model, demonstrating the effectiveness of pretrained image diffusion models as priors.
+                        Generating photos satisfying multiple constraints finds broad utility in the content creation industry. A key hurdle to accomplishing this task is the need for paired data consisting of all modalities (i.e., constraints) and their corresponding output. Moreover, existing methods need retraining using paired data across all modalities to introduce a new condition. This paper proposes a solution to this problem based on denoising diffusion probabilistic models (DDPMs). Our motivation for choosing diffusion models over other generative models comes from the flexible internal structure of diffusion models. Since each sampling step in the DDPM follows a Gaussian distribution, we show that there exists a closed-form solution for generating an image given various constraints. Our method can unite multiple diffusion models trained on multiple sub-tasks and conquer the combined task through our proposed sampling strategy. We also introduce a novel reliability parameter that allows using different off-the-shelf diffusion models trained across various datasets during sampling time alone to guide it to the desired outcome satisfying multiple constraints. We perform experiments on various standard multimodal tasks to demonstrate the effectiveness of our approach. The codes and pre-trained models will be made publicly available.
                     <!-- </strong> -->
                 </p>
             </div>
@@ -120,7 +116,7 @@
                 <video class="video lazy d-xs-block d-sm-none" autoplay loop playsinline muted poster="https://dreamfusion-cdn.ajayj.com/sept28/shaded_3x3_smoothstep.jpg">
                     <source data-src="https://dreamfusion-cdn.ajayj.com/sept28/shaded_3x3_smoothstep.mp4" type="video/mp4"></source>
                 </video>
-                <h6 class="caption">Given a caption, DreamFusion generates relightable 3D objects with high-fidelity appearance, depth, and normals. Objects are represented as a Neural Radiance Field and leverage a pretrained text-to-image diffusion prior such as Imagen.</h6>
+                <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
             </div>
         </div>
     </div>
@@ -149,78 +145,13 @@
                 <!-- <h6 class="caption" id="compositionalCaption">a DSLR photo of a squirrel</h6> -->
             </div>
         </div>
-    </div>
-    <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>Example generated objects</h2>
-                <p>DreamFusion generates objects and scenes from diverse captions. <a href="/gallery.html">Search through hundreds of generated assets in our full gallery.</a></p>
-            </div>
-            <div class="col-sm-4 my-auto">
-                <a href="/gallery.html" class="btn btn-primary btn-lg btn-search"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 600 550">
-                    <path fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"/>
-                    </svg>Search assets
-                </a>
-            </div>
-        </div>
-        <div class="row captioned_videos" id="randomVideos">
-            <!-- <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="https://dreamfusion-cdn.ajayj.com/gallery/a_teddy_bear_pushing_a_shopping_cart_full_of_fruits_and_vegetables_rgbdn_hq_15000.mp4" type="video/mp4"></source>
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
-                </div>
-                <h6 class="caption">A teddy bear pushing a shopping cart full of fruits and vegetables.</h6>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="https://dreamfusion-cdn.ajayj.com/gallery/a_sliced_loaf_of_fresh_bread_rgbdn_hq_15000.mp4" type="video/mp4"></source>
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
-                </div>
-                <h6 class="caption">a sliced loaf of fresh bread.</h6>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="https://dreamfusion-cdn.ajayj.com/gallery/a_zoomed_out_DSLR_photo_of_Sydney_opera_house,_aerial_view_rgbdn_hq_15000.mp4" type="video/mp4"></source>
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
-                </div>
-                <h6 class="caption">a zoomed out DSLR photo of Sydney opera house, aerial view.</h6>
-            </div> -->
-        </div>
-    </div>
-    <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Composing objects into a scene</h2>
-                <!-- <p>Our generated NeRF models can be exported to meshes using the marching cubes algorithm for easy integration into 3D renderers or modeling software.</p> -->
-                <video class="video lazy" autoplay loop playsinline controls muted poster="https://dreamfusion-cdn.ajayj.com/carouselx24_128tall.jpg">
-                    <source src="https://dreamfusion-cdn.ajayj.com/carouselx24_128tall.mp4" type="video/mp4"></source>
-                </video>
-            </div>
-        </div>
-    </div>
-    <hr class="divider" />
-    <div class="container meshes" id="meshContainer" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Mesh exports</h2>
-                <p>Our generated NeRF models can be exported to meshes using the marching cubes algorithm for easy integration into 3D renderers or modeling software.</p>
-            </div>
-        </div>
-    </div>
+    </div>   
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>How does DreamFusion work?</h2>
-                <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p>
+                <!-- <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p> -->
             </div>
         </div>
         <div class="row">
@@ -237,11 +168,11 @@
             <div class="col-md-12">
                 <h2>Citation</h2>
                 <code>
-                    @article{poole2022dreamfusion,<br>
+                   <!--  @article{poole2022dreamfusion,<br>
                     &nbsp; author = {Poole, Ben and Jain, Ajay and Barron, Jonathan T. and Mildenhall, Ben},<br>
                     &nbsp; title  = {DreamFusion: Text-to-3D using 2D Diffusion},<br>
                     &nbsp; journal = {arXiv},<br>
-                    &nbsp; year   = {2022},<br>
+                    &nbsp; year   = {2022},<br> -->
                 }</code>
             </div>
         </div>
