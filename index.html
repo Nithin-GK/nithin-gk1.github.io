@@ -113,6 +113,25 @@
             </i></p><pre xml:space="preserve">
           </pre></div></td>
       </tr>
+     <tr>
+        <td width="30%" valign="top" align="center" href="https://arxiv.org/pdf/2212.07352.pdf">
+          <a href="https://arxiv.org/pdf/2212.07352.pdf">
+            <img src="images/teaser_fig/binoising.png" alt="sym" width="450" height ="300" style="border-style: none" />
+          </a>
+        </td>
+        <td width="70%" valign="top">
+          <a href="https://arxiv.org/pdf/2212.07352.pdf" id="2023binoise_paper"><paper_title>Bi-Noising Diffusion: Towards Conditional Diffusion Models with Generative Restoration Priors</paper_title></a>
+          <br>Kangfu Mei*,<strong>Nithin Goaplakrishnan Nair*</strong>, Vishal M Patel.<br>  <em> Arxiv</em>, 2022<br><div class="paper" id="2023binoise_paper">
+            <a href="https://arxiv.org/pdf/2212.07352.pdf">pdf</a>
+            | <a href="javascript:toggleblock('2023binoise_abs')">abstract</a>
+            | <a href="http://bi-noising.demohub.cc/">Project page</a>
+            <!-- | <a shape="rect" class="togglebib" href="javascript:togglebib('2023FG')">bibtex</a> -->
+            <p align="justify"><i id="2023binoise_abs">
+                Conditional diffusion probabilistic models can model the distribution of natural images and can generate diverse and realistic samples based on given conditions. However, oftentimes their results can be unrealistic with observable color shifts and textures. We believe that this issue results from the divergence between the probabilistic distribution learned by the model and the distribution of natural images. The delicate conditions gradually enlarge the divergence during each sampling timestep. To address this issue, we introduce a new method that brings the predicted samples to the training data manifold using a pretrained unconditional diffusion model. The unconditional model acts as a regularizer and reduces the divergence introduced by the conditional model at each sampling step. We perform comprehensive experiments to demonstrate the effectiveness of our approach on super-resolution, colorization, turbulence removal, and image-deraining tasks. The improvements obtained by our method suggest that the priors can be incorporated as a general plugin for improving conditional diffusion models
+
+            </i></p><pre xml:space="preserve">
+          </pre></div></td>
+      </tr>
       <tr>
         <td width="30%" valign="top" align="center" href="https://arxiv.org/pdf/2206.11892.pdf">
           <a href="https://arxiv.org/pdf/2208.11284.pdf">
@@ -305,6 +324,7 @@
   </body>
   <script xml:space="preserve" language="JavaScript">hideallbibs();</script>
   <script xml:space="preserve" language="javascript">hideblock('2023multi_abs');</script>
+  <script xml:space="preserve" language="javascript">hideblock('2023binoise_abs');</script>
   <script xml:space="preserve" language="javascript">hideblock('2023ddpmcd_abs');</script>
   <script xml:space="preserve" language="javascript">hideblock('2023FG_abs');</script>
   <script xml:space="preserve" language="javascript">hideblock('2023wacv_abs');</script>
